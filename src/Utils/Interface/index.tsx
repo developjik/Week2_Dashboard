@@ -16,6 +16,16 @@ export interface CardProps {
   data: DataInterface;
 }
 
+export interface IFilterMenu {
+  toggle: boolean;
+  handleReset: () => void;
+  handleToggle: () => void;
+  selectedMethod: string[];
+  setSelectedMethod: (arr: string[]) => void;
+  selectedMaterial: string[];
+  setSelectedMaterial: (arr: string[]) => void;
+}
+
 export interface IFilter {
   title: string;
   name: string;

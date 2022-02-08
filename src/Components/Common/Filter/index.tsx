@@ -20,7 +20,6 @@ const Filter: React.FC<IFilter> = ({
       } else {
         if (selected.filter((item: string) => item !== option).length === 0)
           buttonRef.current?.classList.remove('focused');
-
         setSelected(selected.filter((item: string) => item !== option));
       }
     },

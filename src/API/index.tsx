@@ -1,9 +1,7 @@
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 
-const BASE_URL = 'http://localhost:4000/requests';
+const BASE_URL = '/requests';
 
-export const getAPI = async () => {
-  const response = await axios.get(BASE_URL);
-  const data = await response.data;
-  return data;
-};
+export const customAxios: AxiosInstance = axios.create({
+  baseURL: `${BASE_URL}`,
+});
