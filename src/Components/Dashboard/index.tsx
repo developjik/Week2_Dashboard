@@ -8,9 +8,9 @@ import 'Components/Dashboard/scss/Dashboard.scss';
 
 const Dashboard: React.FC = () => {
   let count = 0;
+
   const [toggle, setToggle] = useState<boolean>(false);
   const [datas, setDatas] = useState<DataInterface[]>([]);
-  const [cardDatas, setCardDatas] = useState<DataInterface[]>([]);
   const [selectedMethod, setSelectedMethod] = useState<string[]>([]);
   const [selectedMaterial, setSelectedMaterial] = useState<string[]>([]);
 
@@ -18,7 +18,6 @@ const Dashboard: React.FC = () => {
     const requestGET = async (): Promise<void> => {
       await customAxios.get('/').then((res) => {
         setDatas(res.data);
-        setCardDatas(res.data);
       });
     };
     requestGET();
