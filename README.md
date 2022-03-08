@@ -9,7 +9,7 @@
 
 <br/>
 
-[🌍 배포 링크]()
+[🌍 배포 링크](https://week2-dashboard.herokuapp.com/)
 
 <br />
 
